@@ -1,6 +1,6 @@
 # KShop – Website bán hàng giả lập
 
-Bài ôn giữa kỳ học phần **Phát triển Web kinh doanh** (261BIE503002) – Trường Đại học Kinh tế - Luật, ĐHQG-HCM
+Bài giữa kỳ học phần **Phát triển Web kinh doanh** (261BIE503002) – Trường Đại học Kinh tế - Luật, ĐHQG-HCM
 Sinh viên: **Vương Anh Kiệt** – MSSV: **K244161793** – Lớp: K24416
 
 Trang chủ GitHub Pages: https://kiet-kakaka.github.io/K244161793_VuongAnhKiet_261BIE503002/
