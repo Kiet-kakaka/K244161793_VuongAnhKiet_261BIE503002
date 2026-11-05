@@ -3,12 +3,12 @@
 Bài ôn giữa kỳ học phần **Phát triển Web kinh doanh** (261BIE503002) – Trường Đại học Kinh tế - Luật, ĐHQG-HCM
 Sinh viên: **Vương Anh Kiệt** – MSSV: **K244161793** – Lớp: K24416
 
-Trang chủ GitHub Pages: https://kiet-kakaka.github.io/K244161793_VuongAnhKiet_K24416/
+Trang chủ GitHub Pages: https://kiet-kakaka.github.io/K244161793_VuongAnhKiet_261BIE503002/
 
 ## Cấu trúc thư mục
 
 ```
-K244161793_VuongAnhKiet_K24416/
+K244161793_VuongAnhKiet_261BIE503002/
 ├── index.html                 Trang cửa hàng (Câu 2, 3, 4, 5, 6, 7)
 ├── login.html                 Đăng nhập Admin (Câu 8)
 ├── admin.html                 Dashboard quản lý đơn hàng, thống kê (Câu 8)
