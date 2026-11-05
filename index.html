@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="KShop - Website bán hàng giả lập. Bài ôn giữa kỳ môn Phát triển Web kinh doanh - Vương Anh Kiệt K244161793">
+        <title>KShop – Website bán hàng giả lập | Vương Anh Kiệt K244161793</title>
+        <style>
+            @import url(css/main.css);
+        </style>
+    </head>
+    <body>
+        <!-- ========== HEADER (Câu 2: thẻ ngữ nghĩa header + nav) ========== -->
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="logo" href="index.html" title="Về trang chủ">K<span>Shop</span></a>
+
+                <nav class="main-nav" aria-label="Menu chính">
+                    <ul>
+                        <li><a href="index.html" class="active">Trang chủ</a></li>
+                        <li><a href="#products">Sản phẩm</a></li>
+                        <li><a href="tools/build-products.html">Dữ liệu (Câu 1)</a></li>
+                        <li><a href="login.html">Admin</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-tools">
+                    <!-- Đăng nhập khách hàng (customers.json) để hỗ trợ thanh toán -->
+                    <div id="accountBox" class="account-box">
+                        <button type="button" class="btn btn-ghost" onclick="open_modal('loginModal')">Đăng nhập</button>
+                    </div>
+
+                    <!-- Câu 6: nút giỏ hàng + Mini-cart (position: absolute, z-index) -->
+                    <div class="cart-wrapper">
+                        <button type="button" id="btnCart" class="btn-cart" onclick="toggle_mini_cart()" aria-label="Giỏ hàng">
+                            🛒 Giỏ hàng <span id="cartCount" class="cart-count">0</span>
+                        </button>
+                        <div id="miniCart" class="mini-cart" aria-live="polite">
+                            <!-- Nội dung do hàm render_mini_cart() tạo ra -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner giới thiệu -->
+        <section class="hero">
+            <div class="hero-inner">
+                <h1>Mua sắm thông minh cùng KShop</h1>
+                <p>Thời trang, trang sức và thiết bị điện tử từ FakeStoreAPI. Miễn phí giao hàng cho đơn từ $100.</p>
+            </div>
+        </section>
+
+        <!-- ========== MAIN: aside (form tìm kiếm) + section (danh sách sản phẩm) ========== -->
+        <main class="shop-layout">
+            <!-- Câu 2: Form tìm kiếm nâng cao trong thanh bên (aside) -->
+            <aside class="sidebar" aria-label="Tìm kiếm nâng cao">
+                <form id="frmSearch" class="search-form" autocomplete="off">
+                    <h2>Tìm kiếm nâng cao</h2>
+
+                    <div class="form-group">
+                        <label for="txtKeyword">Từ khóa</label>
+                        <input type="search" id="txtKeyword" name="keyword"
+                               placeholder="VD: jacket, gold, SSD..."
+                               minlength="2" maxlength="50"
+                               pattern="[A-Za-zÀ-ỹ0-9 .,'\-]*"
+                               title="Từ 2 đến 50 ký tự, chỉ gồm chữ, số, khoảng trắng và . , ' -">
+                        <small id="keywordError" class="field-error"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cboCategory">Danh mục <span class="req">*</span></label>
+                        <select id="cboCategory" name="category" required>
+                            <option value="all">Tất cả danh mục</option>
+                            <!-- Các danh mục được nạp từ products.xml -->
+                        </select>
+                    </div>
+
+                    <fieldset class="form-group">
+                        <legend>Khoảng giá (USD)</legend>
+                        <div class="price-range">
+                            <input type="number" id="numPriceMin" name="priceMin" placeholder="Từ"
+                                   min="0" max="10000" step="0.01" inputmode="decimal"
+                                   title="Giá từ 0 đến 10000">
+                            <span>–</span>
+                            <input type="number" id="numPriceMax" name="priceMax" placeholder="Đến"
+                                   min="0" max="10000" step="0.01" inputmode="decimal"
+                                   title="Giá từ 0 đến 10000, phải lớn hơn hoặc bằng giá từ">
+                        </div>
+                        <small id="priceError" class="field-error"></small>
+                    </fieldset>
+
+                    <fieldset class="form-group">
+                        <legend>Màu sắc</legend>
+                        <div id="colorOptions" class="color-options">
+                            <label class="color-option">
+                                <input type="radio" name="color" value="all" checked required>
+                                <span>Tất cả</span>
+                            </label>
+                            <!-- Các màu được nạp từ products.xml -->
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="rngRating">Rating tối thiểu: <output id="outRating" for="rngRating">0</output> ★</label>
+                        <input type="range" id="rngRating" name="rating" min="0" max="5" step="0.5" value="0"
+                               oninput="document.getElementById('outRating').value = this.value">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="check-line">
+                            <input type="checkbox" id="chkInStock" name="inStock" value="1"> Chỉ hiện sản phẩm còn hàng
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                        <button type="reset" class="btn btn-ghost">Xóa lọc</button>
+                    </div>
+                </form>
+
+                <!-- Câu 4: khung hiển thị data-id, data-variant trích xuất được qua Event Delegation -->
+                <section class="event-log" aria-label="Nhật ký Event Delegation">
+                    <h3>Event Delegation</h3>
+                    <p class="muted">Chỉ 1 listener gắn trên <code>#productGrid</code>.</p>
+                    <dl id="eventLog">
+                        <dt>Hành động</dt><dd>–</dd>
+                        <dt>data-id</dt><dd>–</dd>
+                        <dt>data-variant</dt><dd>–</dd>
+                    </dl>
+                </section>
+            </aside>
+
+            <!-- Câu 2 + 3: Danh sách sản phẩm dạng lưới -->
+            <section id="products" class="products-section" aria-labelledby="productsTitle">
+                <div class="products-toolbar">
+                    <h2 id="productsTitle">Danh sách sản phẩm</h2>
+                    <p id="resultInfo" class="muted">Đang tải dữ liệu...</p>
+                    <label class="sort-box">Sắp xếp:
+                        <select id="cboSort" onchange="apply_filters()">
+                            <option value="default">Mặc định</option>
+                            <option value="price-asc">Giá tăng dần</option>
+                            <option value="price-desc">Giá giảm dần</option>
+                            <option value="rating-desc">Rating cao nhất</option>
+                            <option value="name-asc">Tên A → Z</option>
+                        </select>
+                    </label>
+                </div>
+
+                <!-- Container cha DUY NHẤT gắn Event Listener (Câu 4) -->
+                <div id="productGrid" class="product-grid">
+                    <!-- Skeleton Loading (Câu 3) và các thẻ <article> sản phẩm được render bằng JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <!-- ========== MODAL: Xem nhanh sản phẩm (Câu 4) ========== -->
+        <div id="quickViewModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+            <div class="modal-box modal-lg">
+                <button type="button" class="modal-close" onclick="close_modal('quickViewModal')" aria-label="Đóng">×</button>
+                <div id="quickViewBody"></div>
+            </div>
+        </div>
+
+        <!-- ========== MODAL: Rating Detail (Câu 5) ========== -->
+        <div id="reviewModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="rvTitle">
+            <div class="modal-box modal-lg">
+                <button type="button" class="modal-close" onclick="close_modal('reviewModal')" aria-label="Đóng">×</button>
+                <div id="reviewBody"></div>
+            </div>
+        </div>
+
+        <!-- ========== MODAL: Thanh toán (Câu 7) ========== -->
+        <div id="checkoutModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="ckTitle">
+            <div class="modal-box modal-lg">
+                <button type="button" class="modal-close" onclick="close_modal('checkoutModal')" aria-label="Đóng">×</button>
+                <h2 id="ckTitle">Thông tin giao hàng</h2>
+                <div class="checkout-layout">
+                    <form id="frmCheckout" class="checkout-form" novalidate>
+                        <div class="form-group">
+                            <label for="txtFullName">Họ và tên <span class="req">*</span></label>
+                            <input type="text" id="txtFullName" name="fullName" placeholder="Nguyễn Văn A" data-rule="fullName">
+                            <small class="field-error"></small>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="txtPhone">Số điện thoại <span class="req">*</span></label>
+                                <input type="tel" id="txtPhone" name="phone" placeholder="0912345678" data-rule="phone">
+                                <small class="field-error"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="txtEmail">Email <span class="req">*</span></label>
+                                <input type="email" id="txtEmail" name="email" placeholder="ten@gmail.com" data-rule="email">
+                                <small class="field-error"></small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtAddress">Địa chỉ giao hàng <span class="req">*</span></label>
+                            <input type="text" id="txtAddress" name="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" data-rule="address">
+                            <small class="field-error"></small>
+                        </div>
+                        <fieldset class="form-group">
+                            <legend>Phương thức thanh toán</legend>
+                            <label class="check-line"><input type="radio" name="paymentMethod" value="COD" checked> Thanh toán khi nhận hàng (COD)</label>
+                            <label class="check-line"><input type="radio" name="paymentMethod" value="Chuyển khoản"> Chuyển khoản ngân hàng</label>
+                            <label class="check-line"><input type="radio" name="paymentMethod" value="Ví MoMo"> Ví MoMo</label>
+                        </fieldset>
+                        <div class="form-group">
+                            <label for="txtNote">Ghi chú</label>
+                            <textarea id="txtNote" name="note" rows="2" maxlength="200" placeholder="Ví dụ: giao giờ hành chính"></textarea>
+                        </div>
+                        <button type="submit" id="btnPay" class="btn btn-accent btn-block">Xác nhận thanh toán</button>
+                    </form>
+                    <div class="checkout-summary">
+                        <h3>Đơn hàng của bạn</h3>
+                        <div id="checkoutSummary"></div>
+                    </div>
+                </div>
+                <div id="checkoutResult" class="checkout-result"></div>
+            </div>
+        </div>
+
+        <!-- ========== MODAL: Đăng nhập khách hàng (customers.json) ========== -->
+        <div id="loginModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="lgTitle">
+            <div class="modal-box modal-sm">
+                <button type="button" class="modal-close" onclick="close_modal('loginModal')" aria-label="Đóng">×</button>
+                <h2 id="lgTitle">Đăng nhập khách hàng</h2>
+                <form id="frmCustomerLogin" onsubmit="customer_login(event)">
+                    <div class="form-group">
+                        <label for="txtCusUser">Tên đăng nhập</label>
+                        <input type="text" id="txtCusUser" required minlength="3" maxlength="30" placeholder="VD: kh.an">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtCusPass">Mật khẩu</label>
+                        <input type="password" id="txtCusPass" required minlength="6" maxlength="30" placeholder="Ít nhất 6 ký tự">
+                    </div>
+                    <p id="pLoginMsg" class="field-error"></p>
+                    <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                    <p class="muted small">Tài khoản thử: <b>kh.an</b> / <b>123456</b></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- ========== FOOTER (bắt buộc có Họ tên + MSSV) ========== -->
+        <footer class="site-footer">
+            <p>Sinh viên thực hiện: <b>Vương Anh Kiệt</b> – MSSV: <b>K244161793</b> – Lớp: K24416</p>
+            <p>Học phần Phát triển Web kinh doanh – Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
+        </footer>
+
+        <script src="js/common.js"></script>
+        <script src="js/review.js"></script>
+        <script src="js/cart.js"></script>
+        <script src="js/checkout.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            init_shop("productGrid");
+        </script>
+    </body>
+</html>
