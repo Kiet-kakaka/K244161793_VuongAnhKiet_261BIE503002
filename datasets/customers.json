@@ -1,0 +1,122 @@
+[
+    {
+        "id": "C01",
+        "username": "kh.an",
+        "password": "123456",
+        "fullName": "Nguyễn Văn An",
+        "email": "an.nguyen@gmail.com",
+        "phone": "0912345678",
+        "address": "12 Nguyễn Huệ, P. Bến Nghé, Quận 1, TP.HCM",
+        "gender": "Nam",
+        "memberLevel": "Silver",
+        "createdDate": "2026-01-03T10:00:00"
+    },
+    {
+        "id": "C02",
+        "username": "kh.binh",
+        "password": "123456",
+        "fullName": "Trần Thị Bình",
+        "email": "binh.tran@gmail.com",
+        "phone": "0987654321",
+        "address": "45 Lê Lợi, P. Bến Thành, Quận 1, TP.HCM",
+        "gender": "Nữ",
+        "memberLevel": "Gold",
+        "createdDate": "2026-02-04T10:00:00"
+    },
+    {
+        "id": "C03",
+        "username": "kh.cuong",
+        "password": "123456",
+        "fullName": "Lê Hoàng Cường",
+        "email": "cuong.le@yahoo.com",
+        "phone": "0356789012",
+        "address": "78 Võ Văn Ngân, P. Linh Chiểu, TP. Thủ Đức",
+        "gender": "Nam",
+        "memberLevel": "Silver",
+        "createdDate": "2026-03-05T10:00:00"
+    },
+    {
+        "id": "C04",
+        "username": "kh.dung",
+        "password": "123456",
+        "fullName": "Phạm Thùy Dung",
+        "email": "dung.pham@gmail.com",
+        "phone": "0778123456",
+        "address": "Ký túc xá ĐHQG Khu B, Dĩ An, Bình Dương",
+        "gender": "Nữ",
+        "memberLevel": "Bronze",
+        "createdDate": "2026-04-06T10:00:00"
+    },
+    {
+        "id": "C05",
+        "username": "kh.giang",
+        "password": "123456",
+        "fullName": "Hoàng Minh Giang",
+        "email": "giang.hoang@outlook.com",
+        "phone": "0398765432",
+        "address": "9 Trần Hưng Đạo, P.1, Quận 5, TP.HCM",
+        "gender": "Nam",
+        "memberLevel": "Gold",
+        "createdDate": "2026-05-07T10:00:00"
+    },
+    {
+        "id": "C06",
+        "username": "kh.ha",
+        "password": "123456",
+        "fullName": "Võ Thu Hà",
+        "email": "ha.vo@gmail.com",
+        "phone": "0909111222",
+        "address": "102 Nguyễn Văn Linh, Q. Hải Châu, Đà Nẵng",
+        "gender": "Nữ",
+        "memberLevel": "Silver",
+        "createdDate": "2026-06-08T10:00:00"
+    },
+    {
+        "id": "C07",
+        "username": "kh.khoa",
+        "password": "123456",
+        "fullName": "Đặng Đăng Khoa",
+        "email": "khoa.dang@gmail.com",
+        "phone": "0833444555",
+        "address": "25 Kim Mã, Q. Ba Đình, Hà Nội",
+        "gender": "Nam",
+        "memberLevel": "Gold",
+        "createdDate": "2026-07-09T10:00:00"
+    },
+    {
+        "id": "C08",
+        "username": "kh.linh",
+        "password": "123456",
+        "fullName": "Bùi Khánh Linh",
+        "email": "linh.bui@st.uel.edu.vn",
+        "phone": "0566777888",
+        "address": "669 Đỗ Mười, P. Linh Xuân, TP. Thủ Đức",
+        "gender": "Nữ",
+        "memberLevel": "Silver",
+        "createdDate": "2026-08-10T10:00:00"
+    },
+    {
+        "id": "C09",
+        "username": "kh.nam",
+        "password": "123456",
+        "fullName": "Huỳnh Phương Nam",
+        "email": "nam.huynh@gmail.com",
+        "phone": "0702333444",
+        "address": "3/2 Ninh Kiều, Cần Thơ",
+        "gender": "Nam",
+        "memberLevel": "Bronze",
+        "createdDate": "2026-01-11T10:00:00"
+    },
+    {
+        "id": "C10",
+        "username": "kh.oanh",
+        "password": "123456",
+        "fullName": "Ngô Kim Oanh",
+        "email": "oanh.ngo@gmail.com",
+        "phone": "0945666777",
+        "address": "56 Hùng Vương, TP. Huế",
+        "gender": "Nữ",
+        "memberLevel": "Gold",
+        "createdDate": "2026-02-12T10:00:00"
+    }
+]

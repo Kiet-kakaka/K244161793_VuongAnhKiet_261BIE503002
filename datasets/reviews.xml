@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<reviews description="Lịch sử đánh giá sản phẩm: quan hệ nhiều - nhiều giữa sản phẩm và khách hàng">
+    <review id="R001" product_id="1" customer_id="C02" rating="3" date="2026-10-02">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R002" product_id="1" customer_id="C03" rating="3" date="2026-09-03">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R003" product_id="2" customer_id="C09" rating="3" date="2026-10-04">
+        <comment>Chất lượng trung bình so với giá.</comment>
+    </review>
+    <review id="R004" product_id="2" customer_id="C03" rating="3" date="2026-09-05">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R005" product_id="3" customer_id="C10" rating="2" date="2026-10-06">
+        <comment>Size không chuẩn, phải đổi lại.</comment>
+    </review>
+    <review id="R006" product_id="3" customer_id="C05" rating="2" date="2026-09-07">
+        <comment>Size không chuẩn, phải đổi lại.</comment>
+    </review>
+    <review id="R007" product_id="3" customer_id="C07" rating="2" date="2026-10-08">
+        <comment>Size không chuẩn, phải đổi lại.</comment>
+    </review>
+    <review id="R008" product_id="3" customer_id="C08" rating="2" date="2026-09-09">
+        <comment>Không như kỳ vọng, chất liệu hơi mỏng.</comment>
+    </review>
+    <review id="R009" product_id="4" customer_id="C10" rating="2" date="2026-10-10">
+        <comment>Size không chuẩn, phải đổi lại.</comment>
+    </review>
+    <review id="R010" product_id="4" customer_id="C02" rating="2" date="2026-09-11">
+        <comment>Size không chuẩn, phải đổi lại.</comment>
+    </review>
+    <review id="R011" product_id="5" customer_id="C03" rating="5" date="2026-10-12">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R012" product_id="5" customer_id="C04" rating="5" date="2026-09-13">
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+    </review>
+    <review id="R013" product_id="5" customer_id="C07" rating="5" date="2026-10-14">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R014" product_id="6" customer_id="C05" rating="5" date="2026-09-15">
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+    </review>
+    <review id="R015" product_id="6" customer_id="C08" rating="3" date="2026-10-16">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R016" product_id="6" customer_id="C01" rating="5" date="2026-09-17">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R017" product_id="6" customer_id="C04" rating="4" date="2026-10-18">
+        <comment>Khá hài lòng, màu hơi khác ảnh một chút.</comment>
+    </review>
+    <review id="R018" product_id="6" customer_id="C10" rating="4" date="2026-09-19">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R019" product_id="7" customer_id="C09" rating="1" date="2026-10-20">
+        <comment>Không giống mô tả, không hài lòng.</comment>
+    </review>
+    <review id="R020" product_id="7" customer_id="C05" rating="3" date="2026-09-21">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R021" product_id="7" customer_id="C03" rating="2" date="2026-10-22">
+        <comment>Size không chuẩn, phải đổi lại.</comment>
+    </review>
+    <review id="R022" product_id="8" customer_id="C03" rating="5" date="2026-09-23">
+        <comment>Chất lượng rất tốt, sẽ ủng hộ tiếp.</comment>
+    </review>
+    <review id="R023" product_id="8" customer_id="C02" rating="5" date="2026-10-24">
+        <comment>Chất lượng rất tốt, sẽ ủng hộ tiếp.</comment>
+    </review>
+    <review id="R024" product_id="8" customer_id="C01" rating="5" date="2026-09-25">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R025" product_id="8" customer_id="C10" rating="5" date="2026-10-26">
+        <comment>Chất lượng rất tốt, sẽ ủng hộ tiếp.</comment>
+    </review>
+    <review id="R026" product_id="8" customer_id="C05" rating="5" date="2026-09-27">
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+    </review>
+    <review id="R027" product_id="9" customer_id="C10" rating="3" date="2026-10-01">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R028" product_id="9" customer_id="C01" rating="4" date="2026-09-02">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R029" product_id="9" customer_id="C06" rating="3" date="2026-10-03">
+        <comment>Chất lượng trung bình so với giá.</comment>
+    </review>
+    <review id="R030" product_id="9" customer_id="C03" rating="3" date="2026-09-04">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R031" product_id="10" customer_id="C03" rating="4" date="2026-10-05">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R032" product_id="10" customer_id="C10" rating="4" date="2026-09-06">
+        <comment>Hàng đẹp, giá hợp lý.</comment>
+    </review>
+    <review id="R033" product_id="10" customer_id="C09" rating="4" date="2026-10-07">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R034" product_id="10" customer_id="C04" rating="4" date="2026-09-08">
+        <comment>Hàng đẹp, giá hợp lý.</comment>
+    </review>
+    <review id="R035" product_id="10" customer_id="C02" rating="4" date="2026-10-09">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R036" product_id="11" customer_id="C06" rating="5" date="2026-09-10">
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+    </review>
+    <review id="R037" product_id="11" customer_id="C07" rating="4" date="2026-10-11">
+        <comment>Khá hài lòng, màu hơi khác ảnh một chút.</comment>
+    </review>
+    <review id="R038" product_id="11" customer_id="C09" rating="5" date="2026-09-12">
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+    </review>
+    <review id="R039" product_id="12" customer_id="C04" rating="5" date="2026-10-13">
+        <comment>Chất lượng rất tốt, sẽ ủng hộ tiếp.</comment>
+    </review>
+    <review id="R040" product_id="12" customer_id="C03" rating="5" date="2026-09-14">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R041" product_id="12" customer_id="C07" rating="5" date="2026-10-15">
+        <comment>Chất lượng rất tốt, sẽ ủng hộ tiếp.</comment>
+    </review>
+    <review id="R042" product_id="13" customer_id="C06" rating="3" date="2026-09-16">
+        <comment>Bình thường, giao hơi chậm.</comment>
+    </review>
+    <review id="R043" product_id="13" customer_id="C01" rating="4" date="2026-10-17">
+        <comment>Hàng đẹp, giá hợp lý.</comment>
+    </review>
+    <review id="R044" product_id="13" customer_id="C08" rating="3" date="2026-09-18">
+        <comment>Bình thường, giao hơi chậm.</comment>
+    </review>
+    <review id="R045" product_id="14" customer_id="C03" rating="4" date="2026-10-19">
+        <comment>Hàng đẹp, giá hợp lý.</comment>
+    </review>
+    <review id="R046" product_id="14" customer_id="C08" rating="4" date="2026-09-20">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R047" product_id="14" customer_id="C07" rating="5" date="2026-10-21">
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+    </review>
+    <review id="R048" product_id="15" customer_id="C10" rating="4" date="2026-09-22">
+        <comment>Hàng đẹp, giá hợp lý.</comment>
+    </review>
+    <review id="R049" product_id="15" customer_id="C02" rating="4" date="2026-10-23">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R050" product_id="15" customer_id="C07" rating="5" date="2026-09-24">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R051" product_id="15" customer_id="C06" rating="5" date="2026-10-25">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R052" product_id="16" customer_id="C03" rating="5" date="2026-09-26">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R053" product_id="16" customer_id="C05" rating="5" date="2026-10-27">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R054" product_id="16" customer_id="C06" rating="4" date="2026-09-01">
+        <comment>Hàng đẹp, giá hợp lý.</comment>
+    </review>
+    <review id="R055" product_id="16" customer_id="C10" rating="5" date="2026-10-02">
+        <comment>Giao hàng nhanh, đóng gói cẩn thận.</comment>
+    </review>
+    <review id="R056" product_id="16" customer_id="C08" rating="5" date="2026-09-03">
+        <comment>Chất lượng rất tốt, sẽ ủng hộ tiếp.</comment>
+    </review>
+    <review id="R057" product_id="17" customer_id="C08" rating="2" date="2026-10-04">
+        <comment>Size không chuẩn, phải đổi lại.</comment>
+    </review>
+    <review id="R058" product_id="17" customer_id="C09" rating="1" date="2026-09-05">
+        <comment>Không giống mô tả, không hài lòng.</comment>
+    </review>
+    <review id="R059" product_id="18" customer_id="C09" rating="5" date="2026-10-06">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+    <review id="R060" product_id="18" customer_id="C05" rating="4" date="2026-09-07">
+        <comment>Dùng ổn, đáng tiền.</comment>
+    </review>
+    <review id="R061" product_id="18" customer_id="C02" rating="3" date="2026-10-08">
+        <comment>Tạm được, chưa thật sự nổi bật.</comment>
+    </review>
+    <review id="R062" product_id="19" customer_id="C03" rating="5" date="2026-09-09">
+        <comment>Chất lượng rất tốt, sẽ ủng hộ tiếp.</comment>
+    </review>
+    <review id="R063" product_id="19" customer_id="C06" rating="4" date="2026-10-10">
+        <comment>Khá hài lòng, màu hơi khác ảnh một chút.</comment>
+    </review>
+    <review id="R064" product_id="20" customer_id="C09" rating="4" date="2026-09-11">
+        <comment>Khá hài lòng, màu hơi khác ảnh một chút.</comment>
+    </review>
+    <review id="R065" product_id="20" customer_id="C08" rating="5" date="2026-10-12">
+        <comment>Sản phẩm tuyệt vời, đúng như mô tả!</comment>
+    </review>
+</reviews>

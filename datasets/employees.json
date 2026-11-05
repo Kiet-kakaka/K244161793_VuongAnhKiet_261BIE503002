@@ -1,0 +1,57 @@
+[
+    {
+        "id": "E01",
+        "username": "admin",
+        "password": "admin123",
+        "fullName": "Vương Anh Kiệt",
+        "role": "admin",
+        "position": "Quản trị hệ thống",
+        "email": "admin@kshop.vn",
+        "phone": "0942952748",
+        "active": true
+    },
+    {
+        "id": "E02",
+        "username": "nv.lan",
+        "password": "lan123",
+        "fullName": "Nguyễn Thị Lan",
+        "role": "staff",
+        "position": "Nhân viên bán hàng",
+        "email": "lan.nt@kshop.vn",
+        "phone": "0905123456",
+        "active": true
+    },
+    {
+        "id": "E03",
+        "username": "nv.minh",
+        "password": "minh123",
+        "fullName": "Trần Quang Minh",
+        "role": "staff",
+        "position": "Nhân viên bán hàng",
+        "email": "minh.tq@kshop.vn",
+        "phone": "0938456789",
+        "active": true
+    },
+    {
+        "id": "E04",
+        "username": "nv.hoa",
+        "password": "hoa123",
+        "fullName": "Lê Ngọc Hoa",
+        "role": "manager",
+        "position": "Quản lý cửa hàng",
+        "email": "hoa.ln@kshop.vn",
+        "phone": "0977888999",
+        "active": true
+    },
+    {
+        "id": "E05",
+        "username": "nv.tuan",
+        "password": "tuan123",
+        "fullName": "Phạm Anh Tuấn",
+        "role": "staff",
+        "position": "Nhân viên kho",
+        "email": "tuan.pa@kshop.vn",
+        "phone": "0868111222",
+        "active": false
+    }
+]

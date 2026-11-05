@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Câu 1: Tạo products.xml từ FakeStoreAPI bằng DOM</title>
+        <style>
+            @import url(../css/main.css);
+        </style>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="logo" href="../index.html">K<span>Shop</span></a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="../index.html">Trang chủ</a></li>
+                        <li><a href="build-products.html" class="active">Công cụ dữ liệu (Câu 1)</a></li>
+                        <li><a href="../login.html">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="tool-page">
+            <section class="panel">
+                <h1>Câu 1 – Đọc FakeStoreAPI bằng DOM và lưu thành products.xml</h1>
+                <p>
+                    Bước 1 đọc JSON từ <code>https://fakestoreapi.com/products</code> bằng AJAX.
+                    Bước 2 dùng <b>mô hình DOM</b> (<code>createDocument</code>, <code>createElement</code>,
+                    <code>setAttribute</code>, <code>appendChild</code>) để tạo XML, bổ sung <b>màu sắc, size, tồn kho theo biến thể</b>.
+                    Bước 3 lưu file <code>products.xml</code> về máy, chép vào thư mục <code>datasets/</code>.
+                </p>
+                <div class="tool-actions">
+                    <button type="button" class="btn btn-primary" onclick="load_api('tbApi', 'pStatus')">1. Đọc dữ liệu API</button>
+                    <button type="button" class="btn btn-dark" id="btnBuild" disabled onclick="show_xml('preXml', 'pStatus')">2. Tạo XML bằng DOM</button>
+                    <button type="button" class="btn btn-accent" id="btnDownload" disabled onclick="download_xml()">3. Lưu products.xml</button>
+                </div>
+                <p id="pStatus" class="tool-status">Chưa đọc dữ liệu.</p>
+            </section>
+
+            <section class="tool-grid">
+                <article class="panel">
+                    <h2>Dữ liệu gốc từ API</h2>
+                    <div class="table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Danh mục</th>
+                                    <th>Giá (USD)</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbApi"></tbody>
+                        </table>
+                    </div>
+                </article>
+                <article class="panel">
+                    <h2>products.xml (kết quả tạo bằng DOM)</h2>
+                    <pre id="preXml" class="xml-preview">Bấm "2. Tạo XML bằng DOM" để xem kết quả.</pre>
+                </article>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Sinh viên thực hiện: <b>Vương Anh Kiệt</b> – MSSV: <b>K244161793</b> – Lớp: K24416</p>
+            <p>Học phần Phát triển Web kinh doanh – Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
+        </footer>
+
+        <script src="../js/common.js"></script>
+        <script src="../js/build-products.js"></script>
+    </body>
+</html>

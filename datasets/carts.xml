@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<carts currency="USD" description="Hóa đơn bán hàng giả lập - K244161793">
+    <cart id="HD001" createdDate="2026-09-02T08:00:00" status="completed" paymentMethod="COD" channel="online">
+        <employeeId>E02</employeeId>
+        <customerId>C01</customerId>
+        <details>
+            <detail productId="20" sku="P20-BEI-XL" color="Be" size="XL" quantity="2" unitPrice="12.99"/>
+        </details>
+        <shippingFee>5.00</shippingFee>
+        <total>30.98</total>
+        <note>Giao giờ hành chính</note>
+    </cart>
+    <cart id="HD002" createdDate="2026-09-05T09:13:00" status="completed" paymentMethod="Chuyển khoản" channel="store">
+        <employeeId>E03</employeeId>
+        <customerId>C04</customerId>
+        <details>
+            <detail productId="15" sku="P15-WHT-XL" color="Trắng" size="XL" quantity="1" unitPrice="56.99"/>
+            <detail productId="11" sku="P11-GRY-STD" color="Xám" size="Tiêu chuẩn" quantity="2" unitPrice="109.00"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>274.99</total>
+        <note>Gọi trước khi giao</note>
+    </cart>
+    <cart id="HD003" createdDate="2026-09-08T10:26:00" status="completed" paymentMethod="Thẻ tín dụng" channel="store">
+        <employeeId>E04</employeeId>
+        <customerId>C07</customerId>
+        <details>
+            <detail productId="19" sku="P19-RED-L" color="Đỏ" size="L" quantity="1" unitPrice="7.95"/>
+            <detail productId="18" sku="P18-BEI-M" color="Be" size="M" quantity="1" unitPrice="9.85"/>
+            <detail productId="17" sku="P17-WHT-M" color="Trắng" size="M" quantity="3" unitPrice="39.99"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>137.77</total>
+        <note>Không có</note>
+    </cart>
+    <cart id="HD004" createdDate="2026-09-11T11:39:00" status="shipping" paymentMethod="Ví MoMo" channel="online">
+        <employeeId>E02</employeeId>
+        <customerId>C10</customerId>
+        <details>
+            <detail productId="8" sku="P08-RGD-FS" color="Vàng hồng" size="Free size" quantity="1" unitPrice="10.99"/>
+        </details>
+        <shippingFee>5.00</shippingFee>
+        <total>15.99</total>
+        <note>Khách mua tại quầy</note>
+    </cart>
+    <cart id="HD005" createdDate="2026-09-14T12:52:00" status="completed" paymentMethod="COD" channel="store">
+        <employeeId>E03</employeeId>
+        <customerId>C03</customerId>
+        <details>
+            <detail productId="4" sku="P04-PNK-XL" color="Hồng" size="XL" quantity="3" unitPrice="15.99"/>
+            <detail productId="20" sku="P20-PNK-S" color="Hồng" size="S" quantity="2" unitPrice="12.99"/>
+        </details>
+        <shippingFee>5.00</shippingFee>
+        <total>78.95</total>
+        <note>Giao giờ hành chính</note>
+    </cart>
+    <cart id="HD006" createdDate="2026-09-17T13:05:00" status="completed" paymentMethod="Chuyển khoản" channel="store">
+        <employeeId>E02</employeeId>
+        <customerId>C06</customerId>
+        <details>
+            <detail productId="4" sku="P04-PNK-M" color="Hồng" size="M" quantity="2" unitPrice="15.99"/>
+            <detail productId="9" sku="P09-BLK-STD" color="Đen" size="Tiêu chuẩn" quantity="2" unitPrice="64.00"/>
+            <detail productId="1" sku="P01-RED-FS" color="Đỏ" size="Free size" quantity="3" unitPrice="109.95"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>489.83</total>
+        <note>Gọi trước khi giao</note>
+    </cart>
+    <cart id="HD007" createdDate="2026-09-20T14:18:00" status="shipping" paymentMethod="Thẻ tín dụng" channel="online">
+        <employeeId>E03</employeeId>
+        <customerId>C09</customerId>
+        <details>
+            <detail productId="10" sku="P10-WHT-STD" color="Trắng" size="Tiêu chuẩn" quantity="3" unitPrice="109.00"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>327.00</total>
+        <note>Không có</note>
+    </cart>
+    <cart id="HD008" createdDate="2026-09-23T15:31:00" status="completed" paymentMethod="Ví MoMo" channel="store">
+        <employeeId>E04</employeeId>
+        <customerId>C02</customerId>
+        <details>
+            <detail productId="6" sku="P06-SLV-FS" color="Bạc" size="Free size" quantity="3" unitPrice="168.00"/>
+            <detail productId="17" sku="P17-RED-M" color="Đỏ" size="M" quantity="3" unitPrice="39.99"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>623.97</total>
+        <note>Khách mua tại quầy</note>
+    </cart>
+    <cart id="HD009" createdDate="2026-10-02T16:44:00" status="pending" paymentMethod="COD" channel="store">
+        <employeeId>E02</employeeId>
+        <customerId>C05</customerId>
+        <details>
+            <detail productId="19" sku="P19-BLK-M" color="Đen" size="M" quantity="3" unitPrice="7.95"/>
+            <detail productId="10" sku="P10-WHT-STD" color="Trắng" size="Tiêu chuẩn" quantity="1" unitPrice="109.00"/>
+            <detail productId="18" sku="P18-GRY-M" color="Xám" size="M" quantity="3" unitPrice="9.85"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>162.40</total>
+        <note>Giao giờ hành chính</note>
+    </cart>
+    <cart id="HD010" createdDate="2026-10-05T17:57:00" status="cancelled" paymentMethod="Chuyển khoản" channel="online">
+        <employeeId>E03</employeeId>
+        <customerId>C08</customerId>
+        <details>
+            <detail productId="5" sku="P05-RGD-FS" color="Vàng hồng" size="Free size" quantity="2" unitPrice="695.00"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>1390.00</total>
+        <note>Gọi trước khi giao</note>
+    </cart>
+    <cart id="HD011" createdDate="2026-10-08T08:10:00" status="completed" paymentMethod="Thẻ tín dụng" channel="store">
+        <employeeId>E02</employeeId>
+        <customerId>C01</customerId>
+        <details>
+            <detail productId="12" sku="P12-BLK-STD" color="Đen" size="Tiêu chuẩn" quantity="2" unitPrice="114.00"/>
+            <detail productId="15" sku="P15-GRY-S" color="Xám" size="S" quantity="2" unitPrice="56.99"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>341.98</total>
+        <note>Không có</note>
+    </cart>
+    <cart id="HD012" createdDate="2026-10-11T09:23:00" status="completed" paymentMethod="Ví MoMo" channel="store">
+        <employeeId>E03</employeeId>
+        <customerId>C04</customerId>
+        <details>
+            <detail productId="15" sku="P15-GRY-XL" color="Xám" size="XL" quantity="1" unitPrice="56.99"/>
+            <detail productId="3" sku="P03-RED-M" color="Đỏ" size="M" quantity="1" unitPrice="55.99"/>
+            <detail productId="5" sku="P05-RGD-FS" color="Vàng hồng" size="Free size" quantity="1" unitPrice="695.00"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>807.98</total>
+        <note>Khách mua tại quầy</note>
+    </cart>
+    <cart id="HD013" createdDate="2026-10-14T10:36:00" status="pending" paymentMethod="COD" channel="online">
+        <employeeId>E04</employeeId>
+        <customerId>C07</customerId>
+        <details>
+            <detail productId="9" sku="P09-BLK-STD" color="Đen" size="Tiêu chuẩn" quantity="1" unitPrice="64.00"/>
+        </details>
+        <shippingFee>5.00</shippingFee>
+        <total>69.00</total>
+        <note>Giao giờ hành chính</note>
+    </cart>
+    <cart id="HD014" createdDate="2026-10-17T11:49:00" status="cancelled" paymentMethod="Chuyển khoản" channel="store">
+        <employeeId>E02</employeeId>
+        <customerId>C10</customerId>
+        <details>
+            <detail productId="13" sku="P13-BLK-STD" color="Đen" size="Tiêu chuẩn" quantity="2" unitPrice="599.00"/>
+            <detail productId="17" sku="P17-RED-XL" color="Đỏ" size="XL" quantity="1" unitPrice="39.99"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>1237.99</total>
+        <note>Gọi trước khi giao</note>
+    </cart>
+    <cart id="HD015" createdDate="2026-10-20T12:02:00" status="shipping" paymentMethod="Thẻ tín dụng" channel="store">
+        <employeeId>E03</employeeId>
+        <customerId>C03</customerId>
+        <details>
+            <detail productId="17" sku="P17-PNK-XL" color="Hồng" size="XL" quantity="2" unitPrice="39.99"/>
+            <detail productId="3" sku="P03-RED-S" color="Đỏ" size="S" quantity="3" unitPrice="55.99"/>
+            <detail productId="1" sku="P01-WHT-FS" color="Trắng" size="Free size" quantity="3" unitPrice="109.95"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>577.80</total>
+        <note>Không có</note>
+    </cart>
+    <cart id="HD016" createdDate="2026-10-23T13:15:00" status="completed" paymentMethod="Ví MoMo" channel="online">
+        <employeeId>E02</employeeId>
+        <customerId>C06</customerId>
+        <details>
+            <detail productId="13" sku="P13-GRY-STD" color="Xám" size="Tiêu chuẩn" quantity="3" unitPrice="599.00"/>
+        </details>
+        <shippingFee>0.00</shippingFee>
+        <total>1797.00</total>
+        <note>Khách mua tại quầy</note>
+    </cart>
+</carts>
