@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Đăng nhập Admin – KShop | Vương Anh Kiệt K244161793</title>
+        <style>
+            @import url(css/main.css);
+            @import url(css/admin.css);
+        </style>
+    </head>
+    <body class="login-page">
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="logo" href="index.html">K<span>Shop</span></a>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Về cửa hàng</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="login-main">
+            <section class="login-card">
+                <h1>Đăng nhập quản trị</h1>
+                <p class="muted">Dành cho nhân viên/Admin (dữ liệu <code>datasets/employees.json</code>)</p>
+                <form id="frmAdminLogin" novalidate>
+                    <div class="form-group">
+                        <label for="txtUsername">Tên đăng nhập</label>
+                        <input type="text" id="txtUsername" name="username" required minlength="3" maxlength="30"
+                               pattern="[A-Za-z0-9._]+" title="Chỉ gồm chữ không dấu, số, dấu chấm, gạch dưới" placeholder="VD: admin" autofocus>
+                        <small class="field-error"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtPassword">Mật khẩu</label>
+                        <input type="password" id="txtPassword" name="password" required minlength="6" maxlength="30" placeholder="Ít nhất 6 ký tự">
+                        <small class="field-error"></small>
+                    </div>
+                    <label class="check-line"><input type="checkbox" id="chkShowPass"> Hiện mật khẩu</label>
+                    <p id="pLoginError" class="login-error" role="alert"></p>
+                    <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+                </form>
+                <div class="demo-accounts">
+                    <b>Tài khoản thử:</b>
+                    <span><code>admin</code> / <code>admin123</code> (Quản trị)</span>
+                    <span><code>nv.lan</code> / <code>lan123</code> (Nhân viên)</span>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>Sinh viên thực hiện: <b>Vương Anh Kiệt</b> – MSSV: <b>K244161793</b> – Lớp: K24416</p>
+            <p>Học phần Phát triển Web kinh doanh – Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
+        </footer>
+
+        <script src="js/common.js"></script>
+        <script src="js/login.js"></script>
+        <script>
+            init_login("frmAdminLogin");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard Admin – KShop | Vương Anh Kiệt K244161793</title>
+        <style>
+            @import url(css/main.css);
+            @import url(css/admin.css);
+        </style>
+    </head>
+    <body class="admin-page">
+        <header class="site-header">
+            <div class="header-inner">
+                <a class="logo" href="admin.html">K<span>Shop</span> <small class="logo-sub">Admin</small></a>
+                <div class="header-tools">
+                    <span id="adminName" class="admin-name"></span>
+                    <a href="index.html" class="btn btn-ghost btn-sm">Xem cửa hàng</a>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="admin_logout()">Đăng xuất</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="admin-layout">
+            <!-- Menu quản trị -->
+            <nav class="admin-menu" aria-label="Menu quản trị">
+                <a href="#overview" data-section="overview" class="active">📊 Tổng quan</a>
+                <a href="#orders" data-section="orders">🧾 Quản lý đơn hàng</a>
+                <a href="#products" data-section="products">📦 Sản phẩm đã bán</a>
+            </nav>
+
+            <main class="admin-content">
+                <!-- ===== 1. TỔNG QUAN / THỐNG KÊ ĐƠN HÀNG ===== -->
+                <section id="overview" class="admin-section active">
+                    <div class="section-head">
+                        <h1>Tổng quan & thống kê đơn hàng</h1>
+                        <p class="muted">Dữ liệu từ <code>carts.xml</code> + đơn thanh toán online trong localStorage</p>
+                    </div>
+                    <div id="kpiCards" class="kpi-grid"></div>
+                    <div class="chart-grid">
+                        <article class="panel">
+                            <h2>Doanh thu theo tháng</h2>
+                            <div id="chartMonth" class="bar-chart"></div>
+                        </article>
+                        <article class="panel">
+                            <h2>Đơn hàng theo trạng thái</h2>
+                            <div id="chartStatus" class="status-chart"></div>
+                        </article>
+                        <article class="panel">
+                            <h2>Top 5 sản phẩm bán chạy</h2>
+                            <div id="topProducts"></div>
+                        </article>
+                        <article class="panel">
+                            <h2>Doanh thu theo nhân viên</h2>
+                            <div class="table-wrap">
+                                <table class="data-table small">
+                                    <thead>
+                                        <tr><th>Nhân viên</th><th>Số đơn</th><th>Doanh thu</th></tr>
+                                    </thead>
+                                    <tbody id="tbEmployeeStats"></tbody>
+                                </table>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- ===== 2. QUẢN LÝ ĐƠN HÀNG ===== -->
+                <section id="orders" class="admin-section">
+                    <div class="section-head">
+                        <h1>Quản lý đơn hàng</h1>
+                        <p id="orderInfo" class="muted"></p>
+                    </div>
+                    <form id="frmOrderFilter" class="filter-bar panel" onsubmit="return false">
+                        <input type="search" id="txtOrderSearch" placeholder="Tìm mã đơn, tên khách hàng..." oninput="render_orders()">
+                        <select id="cboOrderStatus" onchange="render_orders()">
+                            <option value="all">Tất cả trạng thái</option>
+                            <option value="pending">Chờ xử lý</option>
+                            <option value="shipping">Đang giao</option>
+                            <option value="completed">Hoàn thành</option>
+                            <option value="cancelled">Đã hủy</option>
+                        </select>
+                        <select id="cboOrderSource" onchange="render_orders()">
+                            <option value="all">Tất cả nguồn</option>
+                            <option value="carts.xml">carts.xml</option>
+                            <option value="online">Online (localStorage)</option>
+                        </select>
+                        <label>Từ <input type="date" id="dtFrom" onchange="render_orders()"></label>
+                        <label>Đến <input type="date" id="dtTo" onchange="render_orders()"></label>
+                        <button type="reset" class="btn btn-ghost" onclick="setTimeout(render_orders, 0)">Xóa lọc</button>
+                    </form>
+                    <div class="panel table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Mã HĐ</th>
+                                    <th>Ngày tạo</th>
+                                    <th>Khách hàng</th>
+                                    <th>Nhân viên</th>
+                                    <th>Số SP</th>
+                                    <th>Tổng tiền</th>
+                                    <th>Thanh toán</th>
+                                    <th>Trạng thái</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbOrders"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ===== 3. THỐNG KÊ SẢN PHẨM ĐÃ BÁN ===== -->
+                <section id="products" class="admin-section">
+                    <div class="section-head">
+                        <h1>Thống kê sản phẩm đã bán</h1>
+                        <p class="muted">Không tính các đơn đã hủy</p>
+                    </div>
+                    <div class="filter-bar panel">
+                        <select id="cboProductCategory" onchange="render_products_sold()">
+                            <option value="all">Tất cả danh mục</option>
+                        </select>
+                        <select id="cboProductSort" onchange="render_products_sold()">
+                            <option value="qty">Sắp xếp theo số lượng bán</option>
+                            <option value="revenue">Sắp xếp theo doanh thu</option>
+                        </select>
+                        <label class="check-line"><input type="checkbox" id="chkOnlySold" checked onchange="render_products_sold()"> Chỉ hiện sản phẩm đã bán</label>
+                    </div>
+                    <div class="panel table-wrap">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Sản phẩm</th>
+                                    <th>Danh mục</th>
+                                    <th>Đơn giá</th>
+                                    <th>SL bán</th>
+                                    <th>Doanh thu</th>
+                                    <th>Tỷ trọng doanh thu</th>
+                                    <th>Biến thể bán nhiều nhất</th>
+                                    <th>Tồn kho</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbProductsSold"></tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Popup chi tiết hóa đơn -->
+        <div id="orderModal" class="modal" role="dialog" aria-modal="true">
+            <div class="modal-box modal-lg">
+                <button type="button" class="modal-close" onclick="close_modal('orderModal')" aria-label="Đóng">×</button>
+                <div id="orderDetail"></div>
+            </div>
+        </div>
+
+        <footer class="site-footer">
+            <p>Sinh viên thực hiện: <b>Vương Anh Kiệt</b> – MSSV: <b>K244161793</b> – Lớp: K24416</p>
+            <p>Học phần Phát triển Web kinh doanh – Trường Đại học Kinh tế - Luật, ĐHQG-HCM</p>
+        </footer>
+
+        <script src="js/common.js"></script>
+        <script src="js/admin.js"></script>
+        <script>
+            init_admin();
+        </script>
+    </body>
+</html>

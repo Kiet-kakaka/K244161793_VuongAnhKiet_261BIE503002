@@ -1,0 +1,131 @@
+/*
+ * admin.css - Giao diện trang Đăng nhập + Dashboard Admin (Câu 8)
+ * Sinh viên: Vương Anh Kiệt - MSSV: K244161793 - Lớp: K24416
+ */
+
+/* ===== Trang đăng nhập ===== */
+.login-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 16px;
+    background: radial-gradient(circle at 20% 20%, #dbeafe 0, transparent 45%), radial-gradient(circle at 80% 80%, #ffedd5 0, transparent 45%);
+}
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+    padding: 30px;
+}
+.login-card h1 { font-size: 24px; margin-bottom: 4px; }
+.login-card form { margin-top: 18px; }
+.login-card input.invalid { border-color: var(--danger); background: #fef2f2; }
+.login-error { color: var(--danger); font-weight: 600; min-height: 22px; margin: 6px 0; }
+.demo-accounts { margin-top: 18px; padding: 12px; background: #f8fafc; border-radius: 10px; font-size: 13px; display: flex; flex-direction: column; gap: 4px; }
+
+/* ===== Dashboard ===== */
+.logo-sub { font-size: 13px; color: #94a3b8; font-weight: 600; }
+.admin-name { color: #e2e8f0; font-size: 14px; }
+.admin-name small { color: #94a3b8; }
+.admin-layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.admin-menu {
+    background: #fff;
+    border-right: 1px solid var(--border);
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.admin-menu a {
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--text);
+    font-weight: 600;
+}
+.admin-menu a:hover { background: #f1f5f9; text-decoration: none; }
+.admin-menu a.active { background: var(--primary); color: #fff; }
+.admin-content { padding: 24px; min-width: 0; }
+.admin-section { display: none; }
+.admin-section.active { display: block; }
+.section-head { margin-bottom: 16px; }
+.section-head h1 { font-size: 22px; }
+
+/* Thẻ KPI */
+.kpi-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 18px; }
+.kpi { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px 16px; display: flex; flex-direction: column; gap: 2px; border-top: 4px solid var(--primary); }
+.kpi:nth-child(2) { border-top-color: var(--accent); }
+.kpi:nth-child(3) { border-top-color: var(--success); }
+.kpi:nth-child(4) { border-top-color: var(--warning); }
+.kpi:nth-child(5) { border-top-color: #8b5cf6; }
+.kpi:nth-child(6) { border-top-color: #0ea5e9; }
+.kpi span { color: var(--muted); font-size: 13px; }
+.kpi b { font-size: 22px; }
+.kpi small { color: var(--muted); font-size: 12px; }
+
+.chart-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.chart-grid h2 { font-size: 16px; margin-bottom: 12px; }
+.bar-chart { display: flex; align-items: flex-end; justify-content: space-around; gap: 16px; height: 220px; padding-top: 20px; border-bottom: 1px solid var(--border); }
+.bar-col { flex: 1; max-width: 90px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 6px; }
+.bar { width: 100%; background: linear-gradient(180deg, #60a5fa, #2563eb); border-radius: 8px 8px 0 0; min-height: 4px; }
+.bar-value { font-size: 12px; font-weight: 700; }
+.bar-label { font-size: 12px; color: var(--muted); margin-bottom: -22px; }
+.status-row { display: grid; grid-template-columns: 110px 1fr 30px; gap: 10px; align-items: center; margin: 12px 0; }
+.status-chart .dist-bar { height: 14px; }
+.fill-pending { background: var(--warning) !important; }
+.fill-shipping { background: var(--primary) !important; }
+.fill-completed { background: var(--success) !important; }
+.fill-cancelled { background: var(--danger) !important; }
+.top-list { padding-left: 20px; }
+.top-list li { padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.top-list li span { display: block; }
+.top-list li b { color: var(--accent-dark); font-size: 13px; }
+
+/* Nhãn trạng thái */
+.status { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.status-pending { background: #fef3c7; color: #92400e; }
+.status-shipping { background: #dbeafe; color: #1e40af; }
+.status-completed { background: #dcfce7; color: #166534; }
+.status-cancelled { background: #fee2e2; color: #991b1b; }
+select.status-select { width: auto; font-weight: 700; border: none; border-radius: 999px; padding: 4px 8px; }
+
+/* Bộ lọc */
+.filter-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; padding: 12px 14px; }
+.filter-bar input[type="search"] { flex: 1; min-width: 200px; width: auto; }
+.filter-bar select, .filter-bar input[type="date"] { width: auto; }
+.filter-bar label { display: flex; align-items: center; gap: 6px; font-size: 14px; }
+.panel.table-wrap { padding: 0; overflow-x: auto; }
+.data-table tfoot td { padding: 6px 10px; text-align: right; font-weight: 600; }
+.data-table tfoot td:last-child { text-align: left; }
+.data-table tfoot .grand td { font-size: 16px; color: var(--accent-dark); font-weight: 800; }
+.prod-cell { display: flex; align-items: center; gap: 10px; min-width: 240px; }
+.prod-cell img { width: 40px; height: 40px; object-fit: contain; background: #fff; border: 1px solid var(--border); border-radius: 6px; flex-shrink: 0; }
+.share { display: flex; align-items: center; gap: 8px; min-width: 130px; }
+.share .dist-bar { flex: 1; }
+.info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; margin-bottom: 16px; }
+.info-grid p { display: flex; flex-direction: column; font-size: 14px; }
+.info-grid span { color: var(--muted); font-size: 12.5px; }
+
+@media (max-width: 1200px) {
+    .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 820px) {
+    .admin-layout { grid-template-columns: 1fr; }
+    .admin-menu { flex-direction: row; overflow-x: auto; border-right: none; border-bottom: 1px solid var(--border); padding: 10px; }
+    .admin-menu a { white-space: nowrap; }
+    .chart-grid, .info-grid { grid-template-columns: 1fr; }
+    .admin-content { padding: 16px; }
+}
+@media (max-width: 600px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .admin-name { display: none; }
+}
